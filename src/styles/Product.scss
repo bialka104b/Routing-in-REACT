@@ -4,18 +4,27 @@
 .product__list {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    justify-content: center;
     &-li {
         padding: 20px;
         border: 1px solid black;
         margin: 20px;
         width: 200px;
+        min-height: 200px;
         a {
             text-decoration: none;
-            color: blue;
+            color:yellow;
             transition: 0.2s;
+            display:block;
+            font-weight: 700;
+            img {
+                display: block;
+                width: 100%;
+            }
             &:hover {
                 color:black;
             }

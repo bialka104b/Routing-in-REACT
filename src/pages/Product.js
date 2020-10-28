@@ -1,12 +1,27 @@
 //Nasza podstrona Produktu
 import {Link} from 'react-router-dom';
+import avocado from '../img/avocado.jpg';
+import burak from '../img/burak.jpg';
+import cytryna from '../img/cytryna.jpg';
+import jablko from '../img/jablko.jpg';
+import limonka from '../img/limonka.jpg';
+import ogorek from '../img/ogorek.jpg';
 
 function Product() {
-  const productsArray = ['produkt 1', 'produkt 2', 'produkt 3'];
+  const productsArray = [
+    {name: 'Avocado', url: avocado},
+    {name: 'Burak', url: burak}, 
+    {name: 'Cytryna', url: cytryna},
+    {name: 'Jabłko', url: jablko},
+    {name: 'Limonka', url: limonka}, 
+    {name: 'Ogórek', url: ogorek}
+  ];
   const list = productsArray.map((product, index) => {
     return (
       <li className="product__list-li" key={index}>
-        <Link to="/about">{product}</Link>
+        <Link to={`/one_product/${product.name}`}>{product.name}
+        <img src={`${product.url}`} alt="img" key={index} className="product__img"></img>
+        </Link>
       </li>
     )
   })

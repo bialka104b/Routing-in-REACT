@@ -4,6 +4,7 @@ import {BrowserRouter as Router} from 'react-router-dom';//BrowserRouter jako Ro
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
+//import img from './img/img.jpg';
 
 function App() {
   return (

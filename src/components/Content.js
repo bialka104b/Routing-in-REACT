@@ -6,7 +6,7 @@ import Product from '../pages/Product';
 import Contact from '../pages/Contact';
 import ErrorPage from "../pages/ErrorPage";
 import ForUser from "../pages/ForUser";
-
+import FirstProduct from "../pages/FirstProduct";
 
 function Content() {
   return (
@@ -16,11 +16,12 @@ function Content() {
         <Route path="/" exact component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/product" component={Product}/>
+        <Route path="/one_product/:id" component={FirstProduct}/>{/* id będzie przekazywane propsami do komponentu FirstProduct a następnie OneProduct */}
         <Route path="/contact" component={Contact}/>
         <Route path="/foruser" component={ForUser}/>
         <Route component={ErrorPage}/>
       </Switch>
-      <p>Komponent Content</p>
+      {/* <p>Komponent Content</p> */}
     </div>
   );
 }
